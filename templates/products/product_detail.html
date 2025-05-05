@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="product-detail-wrapper">
+  <div class="product-detail-overlay">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          {% if product.image %}
+            <img src="{{ product.image.url }}" class="img-fluid product-detail-img" alt="{{ product.name }}">
+          {% endif %}
+        </div>
+        <div class="col-md-6 text-light">
+          <h1 class="display-4">{{ product.name }}</h1>
+          <p class="lead">{{ product.description }}</p>
+          <ul class="list-unstyled fs-5">
+            <li><strong>Brand:</strong> {{ product.brand|title }}</li>
+            <li><strong>Grade:</strong> {{ product.grade }}</li>
+            <li><strong>Storage:</strong> {{ product.storage_gb }} GB</li>
+            <li><strong>Camera:</strong> {{ product.camera_megapixels }} MP</li>
+            <li><strong>Price:</strong> ${{ product.price }}</li>
+          </ul>
+          <a href="{% url 'product_list' %}" class="btn btn-outline-light mt-3">← Back</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
