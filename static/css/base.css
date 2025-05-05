@@ -59,6 +59,10 @@ body {
     border: 1px solid #141301 !important; /* near-black */
 }
 
+.bg-black {
+    background: #141301 !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
