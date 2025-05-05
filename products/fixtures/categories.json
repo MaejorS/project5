@@ -1,0 +1,26 @@
+[
+    {
+      "model": "products.category",
+      "pk": 1,
+      "fields": {
+        "name": "smartphones",
+        "friendly_name": "Smartphones"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 2,
+      "fields": {
+        "name": "accessories",
+        "friendly_name": "Accessories"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 3,
+      "fields": {
+        "name": "clearance",
+        "friendly_name": "Clearance"
+      }
+    }
+  ]
