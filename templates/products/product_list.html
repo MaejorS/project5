@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 <h1 class="available">Available Devices</h1>
 <div class="row">
@@ -6,7 +8,7 @@
   <div class="col-md-4">
     <div class="card mb-4">
       {% if product.image %}
-      <img src="{{ product.image.url }}" class="card-img-top product-img" alt="{{ product.name }}">
+          <img src="{% static 'images/' %}{{ product.image }}" alt="{{ product.name }}">
       {% endif %}
       <div class="card-body">
         <h5 class="card-title">{{ product.name }}</h5>

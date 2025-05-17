@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
 {% block content %}
 <div class="product-detail-wrapper">
   <div class="product-detail-overlay">
@@ -6,7 +9,7 @@
       <div class="row align-items-center">
         <div class="col-md-6 text-center">
           {% if product.image %}
-            <img src="{{ product.image.url }}" class="img-fluid product-detail-img" alt="{{ product.name }}">
+            <img src="{% static 'images/' %}{{ product.image }}" alt="{{ product.name }}">
           {% endif %}
         </div>
         <div class="col-md-6 text-light">
