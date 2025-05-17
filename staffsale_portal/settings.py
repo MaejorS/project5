@@ -30,7 +30,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-maejors-project5-d6l5rajvo04.ws-eu118.gitpod.io',  # Gitpod URL
 ]
 
-ALLOWED_HOSTS = ['8000-maejors-project5-r4zgfy3axxg.ws-eu118.gitpod.io', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['8000-maejors-project5-r4zgfy3axxg.ws-eu118.gitpod.io', 'project5megansaenz-c4f7a29ca180.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 INSTALLED_APPS = [
