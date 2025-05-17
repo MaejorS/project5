@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 class Product(models.Model):
     BRAND_CHOICES = [
@@ -17,7 +18,7 @@ class Product(models.Model):
     storage_gb = models.PositiveIntegerField(help_text="Enter storage in GB as an integer (e.g. 128)")
     camera_megapixels = models.DecimalField(max_digits=4, decimal_places=1)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.CharField(max_length=100, blank=True, null=True)
+    image = CloudinaryField('image')
     description = models.TextField(blank=True)
 
     def __str__(self):
