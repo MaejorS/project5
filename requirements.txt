@@ -1,7 +1,9 @@
 asgiref==3.8.1
+cloudinary==1.44.0
 dj-database-url==2.3.0
 Django==5.2.1
 django-allauth==0.50.0
+django-cloudinary-storage==0.3.0
 gunicorn==23.0.0
 oauthlib==3.2.2
 pillow==11.2.1
