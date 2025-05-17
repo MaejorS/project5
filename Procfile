@@ -1,1 +1,1 @@
-web: gunicorn project5megansaenz.wsgi
+web: gunicorn staffsale_portal.wsgi
