@@ -10,7 +10,7 @@
         "camera_megapixels": "48",
         "description": "Grade A iPhone 14 Pro with 128GB storage and 48MP camera.",
         "price": "450.00",
-        "image": "products/iphone14pro.jpg"
+        "image": "media/products/iphone14pro.jpg"
       }
     },
     {
@@ -24,7 +24,7 @@
         "camera_megapixels": "48",
         "description": "Grade B iPhone 15 with 256GB storage and 48MP camera.",
         "price": "500.00",
-        "image": "products/iphone15.jpg"
+        "image": "media/products/iphone15.jpg"
       }
     },
     {
@@ -38,7 +38,7 @@
         "camera_megapixels": "48",
         "description": "Grade A iPhone 15 Pro with 128GB storage and 48MP camera.",
         "price": "550.00",
-        "image": "products/iphone15pro.jpg"
+        "image": "media/products/iphone15pro.jpg"
       }
     },
     {
@@ -52,7 +52,7 @@
         "camera_megapixels": "50",
         "description": "Grade B Samsung Galaxy S22 with 128GB storage and 50MP camera.",
         "price": "400.00",
-        "image": "products/galaxy_s22.jpg"
+        "image": "media/products/galaxy_s22.jpg"
       }
     },
     {
@@ -66,7 +66,7 @@
         "camera_megapixels": "108",
         "description": "Grade A Samsung Galaxy S22 Ultra with 256GB storage and 108MP camera.",
         "price": "500.00",
-        "image": "products/galaxy_s22_ultra.jpg"
+        "image": "media/products/galaxy_s22_ultra.jpg"
       }
     },
     {
@@ -80,7 +80,7 @@
         "camera_megapixels": "50",
         "description": "Grade B Samsung Galaxy S23 with 128GB storage and 50MP camera.",
         "price": "450.00",
-        "image": "products/galaxy_s23.jpg"
+        "image": "media/products/galaxy_s23.jpg"
       }
     },
     {
@@ -94,7 +94,7 @@
         "camera_megapixels": "200",
         "description": "Grade A Samsung Galaxy S23 Ultra with 256GB storage and 200MP camera.",
         "price": "600.00",
-        "image": "products/galaxy_s23_ultra.jpg"
+        "image": "media/products/galaxy_s23_ultra.jpg"
       }
     },
     {
@@ -108,7 +108,7 @@
         "camera_megapixels": "50",
         "description": "Grade B Samsung Galaxy S24 with 128GB storage and 50MP camera.",
         "price": "500.00",
-        "image": "products/galaxy_s24.jpg"
+        "image": "pmedia/products/galaxy_s24.jpg"
       }
     },
     {
@@ -122,7 +122,7 @@
         "camera_megapixels": "200",
         "description": "Grade A Samsung Galaxy S24 Ultra with 256GB storage and 200MP camera.",
         "price": "650.00",
-        "image": "products/galaxy_s24_ultra.jpg"
+        "image": "media/products/galaxy_s24_ultra.jpg"
       }
     },
     {
@@ -136,7 +136,7 @@
         "camera_megapixels": "48",
         "description": "Grade B iPhone 15 Pro Max with 256GB storage and 48MP camera.",
         "price": "600.00",
-        "image": "products/iphone15promax.jpg"
+        "image": "media/products/iphone15promax.jpg"
       }
     }
   ]
