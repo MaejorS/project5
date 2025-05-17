@@ -17,7 +17,7 @@ class Product(models.Model):
     storage_gb = models.PositiveIntegerField(help_text="Enter storage in GB as an integer (e.g. 128)")
     camera_megapixels = models.DecimalField(max_digits=4, decimal_places=1)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(upload_to='product_images/', blank=True, null=True)
+    image = models.CharField(max_length=100, blank=True, null=True)
     description = models.TextField(blank=True)
 
     def __str__(self):
