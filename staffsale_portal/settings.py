@@ -24,13 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_8kto=)xyr&dp^eqm&7c^bkq6_q)w#=dyea@*vde&2qhgn^wac'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-maejors-project5-d6l5rajvo04.ws-eu118.gitpod.io',  # Gitpod URL
+    'https://project5megansaenz-c4f7a29ca180.herokuapp.com/',  # Gitpod URL
 ]
 
-ALLOWED_HOSTS = ['8000-maejors-project5-r4zgfy3axxg.ws-eu118.gitpod.io', 'project5megansaenz-c4f7a29ca180.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['project5megansaenz-c4f7a29ca180.herokuapp.com']
+
+#, 'localhost', '127.0.0.1'
 
 
 INSTALLED_APPS = [
@@ -63,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'staffsale_portal.urls'
@@ -156,10 +159,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Media files (uploaded product images, etc.)
 MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
