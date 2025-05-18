@@ -9,6 +9,9 @@ from checkout.models import Order
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.urls import reverse
+from .models import CustomerProfile
+from .forms import CustomerProfileForm
+from django.contrib import messages
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -54,3 +57,18 @@ class OrderSuccessView(View):
         from django.contrib import messages
         messages.success(request, f"Order placed for {product.name}! Please pickup your order with The Operations Admin!")
         return redirect('home')
+
+@login_required
+def customer_profile_view(request):
+    profile, created = CustomerProfile.objects.get_or_create(user=request.user)
+
+    if request.method == 'POST':
+        form = CustomerProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your profile has been successfully updated.")
+            return redirect('customer_profile')
+    else:
+        form = CustomerProfileForm(instance=profile)
+
+    return render(request, 'checkout/customer_profile.html', {'form': form})
