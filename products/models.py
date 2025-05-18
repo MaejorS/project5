@@ -19,7 +19,11 @@ class Product(models.Model):
     camera_megapixels = models.DecimalField(max_digits=4, decimal_places=1)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = CloudinaryField('image', blank=True, null=True)
+    image_url = models.URLField(blank=True, null=True, help_text="Paste a Cloudinary image URL here if not uploading.")
     description = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
+
+    def display_image(self):
+        return self.image_url or (self.image.url if self.image else None)
