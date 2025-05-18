@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-_8kto=)xyr&dp^eqm&7c^bkq6_q)w#=dyea@*vde&2qhgn^wac
 DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://project5megansaenz-c4f7a29ca180.herokuapp.com/',  # Gitpod URL
+    'https://project5megansaenz-c4f7a29ca180.herokuapp.com/',
+    'https://8000-maejors-project5-r4zgfy3axxg.ws-eu118.gitpod.io',
 ]
 
 ALLOWED_HOSTS = ['project5megansaenz-c4f7a29ca180.herokuapp.com', '8000-maejors-project5-r4zgfy3axxg.ws-eu118.gitpod.io']
