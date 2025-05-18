@@ -124,6 +124,48 @@ body {
     object-fit: contain;
   }
 
+/* Center the login form and make it more readable */
+.auth-form-wrapper {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent for visibility */
+    border-radius: 10px;
+    color: white;
+}
+
+/* Ensure all text is white */
+.auth-form-wrapper h2,
+.auth-form-wrapper label,
+.auth-form-wrapper p,
+.auth-form-wrapper a {
+    color: white !important;
+}
+
+/* Style the input fields */
+.auth-form-wrapper input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Button styling */
+.auth-form-wrapper button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0F084B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.auth-form-wrapper button:hover {
+    background-color: #3490DC;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
