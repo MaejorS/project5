@@ -29,10 +29,13 @@ body {
     width: fit-content;
 }
 
+
+Then apply it to your 
+
 /* Buttons */
 .shop-now-button {
-    background: #0F084B; /* dark navy */
-    color: #FFFFFF;      /* keep text white for contrast */
+    background: #0F084B;
+    color: #FFFFFF;
     min-width: 260px;
 }
 
