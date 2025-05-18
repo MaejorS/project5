@@ -7,4 +7,4 @@ class OrderAdmin(admin.ModelAdmin):
 
 @admin.register(CustomerProfile)
 class CustomerProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'phone_number', 'pickup_location')
+    list_display = ('user', 'phone_number', 'department')
