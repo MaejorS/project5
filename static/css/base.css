@@ -135,35 +135,21 @@ body {
 }
 
 /* Ensure all text is white */
-.auth-form-wrapper h2,
-.auth-form-wrapper label,
-.auth-form-wrapper p,
-.auth-form-wrapper a {
+.signin {
     color: white !important;
 }
 
 /* Style the input fields */
-.auth-form-wrapper input {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+.form-group {
+    color: white;
+}
+
+.noaccount {
+    color: white;
 }
 
 /* Button styling */
-.auth-form-wrapper button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0F084B;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
 
-.auth-form-wrapper button:hover {
-    background-color: #3490DC;
-}
 
 
 /* -------------------------------- Media Queries */

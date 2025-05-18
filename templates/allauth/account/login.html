@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container mt-5">
-  <h2>{% trans "Sign In" %}</h2>
+  <h2 class="signin">{% trans "Sign In" %}</h2>
 
   {% if form.errors %}
     <div class="alert alert-danger">
@@ -15,12 +15,12 @@
     {% csrf_token %}
     
     <div class="form-group mb-3">
-      <label for="{{ form.login.id_for_label }}">{{ form.login.label }}</label>
+      <label class="labellogin" for="{{ form.login.id_for_label }}">{{ form.login.label }}</label>
       {{ form.login }}
     </div>
 
     <div class="form-group mb-3">
-      <label for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
+      <label class="labellogin" for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
       {{ form.password }}
     </div>
 
@@ -35,7 +35,7 @@
     <a href="{% url 'account_reset_password' %}">{% trans "Forgot your password?" %}</a>
   </p>
 
-  <p>
+  <p class="noaccount">
     {% trans "Don't have an account?" %}
     <a href="{% url 'account_signup' %}">{% trans "Sign up here" %}</a>
   </p>
