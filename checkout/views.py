@@ -47,9 +47,10 @@ class OrderSuccessView(View):
         Order.objects.create(
             user=request.user,
             product=product,
-            stripe_payment_id="test_payment_id"  # you can replace this if capturing real Stripe IDs
+            price_paid=product.price,
+            stripe_payment_id="test_payment_id"
         )
 
         from django.contrib import messages
-        messages.success(request, f"Order placed for {product.name}")
+        messages.success(request, f"Order placed for {product.name}! Please pickup your order with The Operations Admin!")
         return redirect('home')
