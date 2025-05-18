@@ -7,11 +7,13 @@
   {% for product in products %}
   <div class="col-md-4">
     <div class="card mb-4">
-      {% if product.image %}
-        <div class="image-container">
-          <img src="{{ product.image }}" alt="{{ product.name }}" class="product-img">
-        </div>
-      {% endif %}
+      {% with product.display_image as image_src %}
+        {% if image_src %}
+          <div class="image-container">
+            <img src="{{ image_src }}" alt="{{ product.name }}" class="product-img">
+          </div>
+        {% endif %}
+      {% endwith %}
       <div class="card-body">
         <h5 class="card-title">{{ product.name }}</h5>
         <p>{{ product.storage_gb }}GB</p>
