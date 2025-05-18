@@ -45,7 +45,7 @@
 </head>
 
 <body>
-  <header class="container-fluid fixed-top">
+  <header class="w-100 fixed-top bg-white">
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -86,6 +86,7 @@
               {% else %}
               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
               <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              <a href="{% url 'home' %}" class="dropdown-item">Home</a>
               
               {% endif %}
             </div>
@@ -94,12 +95,40 @@
         </ul>
       </div>
     </div>
-    <div class="row bg-white">
-      
-        {% include 'includes/mobile-top-header.html' %}
-        {% include 'includes/main-nav.html' %}
-      </nav>
-    </div>
+     <!-- Mobile Header -->
+     <nav class="navbar d-lg-none bg-white py-2 w-100">
+      <div class="d-flex justify-content-between align-items-center w-100 ps-3 pe-2">
+        <!-- Logo -->
+        <a class="logo-font text-black my-0" href="{% url 'home' %}">
+          <strong>Staff</strong><strong> Sale</strong> Portal
+        </a>
+
+        <!-- My Account -->
+        <div class="dropdown myaccountblock">
+          <a class="text-black nav-link p-0" href="#" id="user-options"
+             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+              <div><i class="fas fa-user fa-lg"></i></div>
+              <p class="my-0">My Account</p>
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
+            {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a>
+              {% endif %}
+              <a href="{% url 'customer_profile' %}" class="dropdown-item">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              <a href="{% url 'home' %}" class="dropdown-item">Home</a>
+            {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              <a href="{% url 'home' %}" class="dropdown-item">Home</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </nav>
   </header>
 
   {% if messages %}

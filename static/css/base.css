@@ -21,6 +21,21 @@ body {
     width: 1.5rem;
 }
 
+.myaccountblock {
+    position: relative;
+    z-index: 999;
+}
+
+.dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+}
+
+.dropdown-menu-right {
+    right: 0 !important;
+    left: auto !important;
+}
+
 .logo-font {
     text-transform: uppercase;
 }
@@ -30,13 +45,22 @@ body {
 }
 
 
-Then apply it to your 
 
 /* Buttons */
 .shop-now-button {
-    background: #0F084B;
+    background: #0F084B; /* dark navy */
     color: #FFFFFF;
     min-width: 260px;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    display: inline-block;
+    border: none;
+    border-radius: 50px; /* fully rounded pill shape */
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn-black {
