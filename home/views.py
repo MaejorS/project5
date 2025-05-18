@@ -1,14 +1,9 @@
 from django.shortcuts import render
 from django.contrib import messages
 
-def home_view(request):
+def home(request):
     if request.GET.get('success') == 'true':
-        messages.success(request, "Order placed successfully!")
-
-    if request.GET.get('canceled') == 'true':
-        messages.warning(request, "Payment was canceled.")
-
-def index(request):
-    """A view to return the index page"""
-    
+        messages.success(request, "Payment successful! Thanks for your purchase! Your device is ready for pickup with The Operations Admin.")
+    elif request.GET.get('canceled') == 'true':
+        messages.warning(request, "Payment canceled. Feel free to try again.")
     return render(request, 'home/index.html')
