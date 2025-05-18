@@ -158,6 +158,11 @@ body {
     color: white;
 }
 
+.container {
+    color: white;
+    padding-top: 40px;
+}
+
 
 
 /* -------------------------------- Media Queries */
