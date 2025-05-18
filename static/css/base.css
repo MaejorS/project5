@@ -11,6 +11,7 @@ body {
     padding-top: 100px;
 }
 
+
 /* from Bulma as advised in Botique Ado walkthrough */
 .icon {
     align-items: center;
@@ -148,7 +149,14 @@ body {
     color: white;
 }
 
-/* Button styling */
+.mt-3 {
+    color: white;
+}
+
+/*password reset page */
+.pwreset {
+    color: white;
+}
 
 
 

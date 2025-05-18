@@ -3,8 +3,8 @@
 
 {% block content %}
   <div class="container mt-5">
-    <h2>{% trans "Sign Out" %}</h2>
-    <p>{% trans "Are you sure you want to sign out?" %}</p>
+    <h2 class="signin">{% trans "Sign Out" %}</h2>
+    <p class="signin">{% trans "Are you sure you want to sign out?" %}</p>
     <form method="post" action="{% url 'account_logout' %}">
       {% csrf_token %}
       <button type="submit" class="btn btn-danger">{% trans "Sign Out" %}</button>
