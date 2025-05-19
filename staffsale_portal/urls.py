@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from products import views as product_views
+from django.views.generic import TemplateView
 
 
 urlpatterns = [
@@ -26,6 +27,8 @@ urlpatterns = [
     path('', include('home.urls')),
     path('products/', include('products.urls')),
     path('checkout/', include('checkout.urls')),
+    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
+    path("sitemap.xml", TemplateView.as_view(template_name="sitemap.xml", content_type="application/xml")),
 ]
 
 if settings.DEBUG:

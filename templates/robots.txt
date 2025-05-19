@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://8000-maejors-project5-r4zgfy3axxg.ws-eu118.gitpod.io/sitemap.xml
