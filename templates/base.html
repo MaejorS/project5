@@ -42,6 +42,7 @@
   {% endblock %}
 
   <title>Staff Sale Portal {% block extra_title %}{% endblock %}</title>
+  <meta name="description" content="Preloved devices at fabulous prices, exclusively for staff.">
 </head>
 
 <body>
@@ -146,6 +147,31 @@
 
   {% block content %}
   {% endblock %}
+<!-- Footer -->
+<footer class="bg-dark text-white py-1 mt-3">
+  <div class="container text-center">
+    <h5 class="mb-3">Subscribe to our Newsletter</h5>
+    <form action="https://formspree.io/f/monokoze" method="POST" class="form-inline d-flex justify-content-center flex-wrap">
+      <input type="email" name="email" class="form-control mb-2 mr-2 w-50" placeholder="Enter your email" required>
+      <button type="submit" class="btn btn-light mb-2">Subscribe</button>
+    </form>
+
+    <div class="mt-1">
+      <p class="mb-2">Follow us:</p>
+      <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61576233850068" class="text-white mx-2" aria-label="Facebook">
+        <i class="fab fa-facebook fa-lg"></i>
+      </a>
+      <a href="https://x.com/?lang=en" class="text-white mx-2" aria-label="Twitter / X">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a href="https://www.instagram.com/" class="text-white mx-2" aria-label="Instagram">
+        <i class="fab fa-instagram fa-lg"></i>
+      </a>
+    </div>
+
+    <p class="mt-4 mb-0 small">&copy; 2025 Staff Sale Portal. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 
