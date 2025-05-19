@@ -45,7 +45,7 @@
   <meta name="description" content="Preloved devices at fabulous prices, exclusively for staff.">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
   <header class="w-100 fixed-top bg-white">
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -60,6 +60,7 @@
             <div class="input-group-append">
           
                 </span>
+                
               </button>
             </div>
           </div>
@@ -78,7 +79,7 @@
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
-              <a href="" class="dropdown-item">Product Management</a>
+              <a href="{% url 'admin:index' %}" class="dropdown-item">Admin Dashboard</a>
               {% endif %}
               <a href="{% url 'customer_profile' %}" class="dropdown-item">My Profile</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -116,7 +117,7 @@
           <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
             {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
-                <a href="{% url 'account_logout' %}" class="dropdown-item">Product Management</a>
+              <a href="{% url 'admin:index' %}" class="dropdown-item">Admin Dashboard</a>
               {% endif %}
               <a href="{% url 'customer_profile' %}" class="dropdown-item">My Profile</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -145,10 +146,14 @@
     </div>
   {% endif %}
 
-  {% block content %}
-  {% endblock %}
+  <main class="flex-fill">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  
 <!-- Footer -->
-<footer class="bg-dark text-white py-1 mt-3">
+<footer class="bg-dark text-white py-0 mt-1">
   <div class="container text-center">
     <h5 class="mb-3">Subscribe to our Newsletter</h5>
     <form action="https://formspree.io/f/manokoze" method="POST" class="form-inline d-flex justify-content-center flex-wrap">
@@ -157,7 +162,7 @@
     </form>
 
     <div class="mt-1">
-      <p class="mb-2">Follow us:</p>
+      <p class="mb-3 mt-1">Follow us:</p>
       <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61576233850068" class="text-white mx-2" aria-label="Facebook" rel="nofollow noopener" target="_blank">
         <i class="fab fa-facebook fa-lg"></i>
       </a>
@@ -169,7 +174,7 @@
       </a>
     </div>
 
-    <p class="mt-4 mb-0 small">&copy; 2025 Staff Sale Portal. All rights reserved.</p>
+    <p class="mt-2 mb-0 small">&copy; 2025 Staff Sale Portal. All rights reserved.</p>
   </div>
 </footer>
 
