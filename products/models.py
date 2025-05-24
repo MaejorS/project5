@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
+
 class Product(models.Model):
     BRAND_CHOICES = [
         ('apple', 'Apple'),
@@ -15,11 +16,11 @@ class Product(models.Model):
     name = models.CharField(max_length=100)
     brand = models.CharField(max_length=20, choices=BRAND_CHOICES)
     grade = models.CharField(max_length=1, choices=GRADE_CHOICES)
-    storage_gb = models.PositiveIntegerField(help_text="Enter storage in GB as an integer (e.g. 128)")
+    storage_gb = models.PositiveIntegerField(help_text="Enter storage in GB")
     camera_megapixels = models.DecimalField(max_digits=4, decimal_places=1)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = CloudinaryField('image', blank=True, null=True)
-    image_url = models.URLField(blank=True, null=True, help_text="Paste a Cloudinary image URL here if not uploading.")
+    image_url = models.URLField(blank=True, null=True,help_text="Paste a Cloudinaryimage URL here if not uploading.")  # noqa
     description = models.TextField(blank=True)
 
     def __str__(self):
