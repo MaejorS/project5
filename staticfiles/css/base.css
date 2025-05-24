@@ -11,6 +11,7 @@ body {
     padding-top: 100px;
 }
 
+
 /* from Bulma as advised in Botique Ado walkthrough */
 .icon {
     align-items: center;
@@ -18,6 +19,21 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+.myaccountblock {
+    position: relative;
+    z-index: 999;
+}
+
+.dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+}
+
+.dropdown-menu-right {
+    right: 0 !important;
+    left: auto !important;
 }
 
 .logo-font {
@@ -28,11 +44,23 @@ body {
     width: fit-content;
 }
 
+
+
 /* Buttons */
 .shop-now-button {
     background: #0F084B; /* dark navy */
-    color: #FFFFFF;      /* keep text white for contrast */
+    color: #FFFFFF;
     min-width: 260px;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    display: inline-block;
+    border: none;
+    border-radius: 50px; /* fully rounded pill shape */
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn-black {
@@ -135,35 +163,33 @@ body {
 }
 
 /* Ensure all text is white */
-.auth-form-wrapper h2,
-.auth-form-wrapper label,
-.auth-form-wrapper p,
-.auth-form-wrapper a {
+.signin {
     color: white !important;
 }
 
 /* Style the input fields */
-.auth-form-wrapper input {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-/* Button styling */
-.auth-form-wrapper button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0F084B;
+.form-group {
     color: white;
-    border: none;
-    border-radius: 5px;
 }
 
-.auth-form-wrapper button:hover {
-    background-color: #3490DC;
+.noaccount {
+    color: white;
 }
+
+.mt-3 {
+    color: white;
+}
+
+/*password reset page */
+.pwreset {
+    color: white;
+}
+
+.container {
+    color: white;
+    padding-top: 40px;
+}
+
 
 
 /* -------------------------------- Media Queries */
