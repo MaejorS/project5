@@ -8,9 +8,6 @@ Developer: Megan Saenz ([MaejorS](https://www.github.com/MaejorS))
 
 A Django-based internal sales portal for staff members to browse and purchase mobile devices (e.g., iPhones and Samsung phones). The system supports device listings by grade, storage, camera specs, and allows secure checkout using Stripe.
 
-
-🛑 NOTES 🛑
-
 **Site Mockups**
 
 ![screenshot](/documentation/wireframes/mockup.png)
@@ -23,8 +20,6 @@ source: [project5 amiresponsive](https://ui.dev/amiresponsive?url=https://projec
 ## UX
 
 ### The 5 Planes of UX
-
-⚠️ NOTE: make sure to update the text below to match your own project! ⚠️
 
 #### 1. Strategy
 
@@ -120,14 +115,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 
 ## Features
-
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, you should go over the different parts of your project, and describe each feature. You should explain what value each of the features provides for the user, focusing on your target audience, what they want to achieve, and how your project can help them achieve these things.
-
-**IMPORTANT**: Remember to always include a screenshot of each individual feature!
-
-⚠️ --- END --- ⚠️
 
 ### Existing Features
 
