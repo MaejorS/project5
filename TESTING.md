@@ -97,13 +97,15 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 I ran into a lot of error working on this project. Many of which I did not capture as I spent a lot of time trying to fix them. Most of them dealt with typos or a migration not pushing through to Heroku for some reason. Often, I'd have to install Heroku's CLI and push to Heroku main in order to get the migrations through. 
 
+I also had to go back and set up my datatbase with an env.py file which I had forgotten about in project 4. I went back and connected the database to an env.py file so that it could use SQL with Heroku
+
 | ![screenshot](documentation/bugs/error1.png) |
 | ![screenshot](documentation/bugs/error2.png) |
 
 ### Unfixed Bugs
 
+There needs to be stronger form validation. The messages are a bit to ambigous. I couldn't get the 404 page to display white text on the header. 
 
-One bug I've done my best to fix but can't seem to find the root is with Admin loging. It seems the database wipes the authenticated user, requiring me to create a new superuser every few days.
 
 
 
